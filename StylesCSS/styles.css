@@ -42,10 +42,10 @@ a {
     min-width: 320px;
     height: 334px;
     text-align: center;
-    background-image: url("../Images/home-bg-2.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    animation: hero 6s ease-in 6s infinite alternate both;
 }
 
 .hero--title-container {
@@ -837,6 +837,27 @@ footer {
     background-color: var(--black);
     color: var(--just-white);
     border-radius: 50%;
+}
+
+@keyframes hero {
+    0% {
+        background-image: url(../Images/home-bg-2.jpg);
+    }
+    25% {
+        background-image: url(../Images/home-bg-2.jpg);
+    }
+    30% {
+        background-image: url(../Images/home-bg.jpg);
+    }
+    60% {
+        background-image: url(../Images/home-bg.jpg);
+    }
+    75% {
+        background-image: url(../Images/home-bg-2.jpg);
+    }
+    100% {
+        background-image: url(../Images/home-bg-2.jpg);
+    }
 }
 
 @media only screen and (max-width: 576px) {
