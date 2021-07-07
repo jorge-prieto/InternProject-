@@ -423,12 +423,43 @@ a {
 
 .portfolio__img-container {
     max-height: 550px;
+    overflow: hidden;
 }
 
 .portfolio__img-container img {
     width: 300px;
     height: 500px;
     margin: 20px auto;
+}
+
+.portfolio__background--container {
+    position: relative;
+    bottom: 52.25rem;
+    width: 100%;
+    height: 50rem;
+    z-index: -1;
+    background-color: rgba(109, 196, 174, 0.4);
+    text-align: center;
+    color: var(--just-white);
+}
+
+.portfolio__background--container span {
+    margin-top: 20rem;
+    font-size: 2.3rem;
+}
+
+.portfolio__background--container h3 {
+    margin-top: 3rem;
+    font-size: 1.6rem;
+}
+
+.portfolio__background--container p {
+    margin-top: 2rem;
+    font-size: 1.3rem;
+}
+
+.portfolio__img-container:hover > .portfolio__background--container {
+    z-index: 1;
 }
 
 .main-blog-detail {
@@ -1046,11 +1077,22 @@ footer {
 
     .portfolio__img-container {
         margin: 0 5px;
+        overflow: hidden;
     }
 
     .portfolio__img-container img {
         width: 100%;
         height: auto;
+    }
+
+    .portfolio__background--container {
+        position: relative;
+        bottom: 40rem;
+        height: 38rem;
+    }
+
+    .portfolio__background--container span {
+        margin-top: 15rem;
     }
 
     .blog-detail--container {
@@ -1186,11 +1228,23 @@ footer {
 
     .portfolio__img-container {
         margin: 0 5px;
+        overflow: hidden;
     }
 
     .portfolio__img-container img {
         width: 100%;
         height: auto;
+    }
+
+    .portfolio__background--container {
+        position: relative;
+        bottom: 36.25rem;
+        width: 100%;
+        height: 35rem;
+    }
+
+    .portfolio__background--container span {
+        margin-top: 13rem;
     }
 
     .blog-detail--container {
