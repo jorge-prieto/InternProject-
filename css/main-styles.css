@@ -200,16 +200,16 @@ a {
   background-repeat: no-repeat;
 }
 .laptop {
-  background-image: url("../Images/icons/laptop.svg");
+  background-image: url("../assets/icons/laptop.svg");
 }
 .focus {
-  background-image: url("../Images/icons/focus.svg");
+  background-image: url("../assets/icons/focus.svg");
 }
 .cloud {
-  background-image: url("../Images/icons/cloud.svg");
+  background-image: url("../assets/icons/cloud.svg");
 }
 .basket {
-  background-image: url("../Images/icons/basket.svg");
+  background-image: url("../assets/icons/basket.svg");
 }
 .services-card-title {
   margin-bottom: 1.5rem;
@@ -448,7 +448,7 @@ a {
 }
 .blog-post-container .post-button:hover {
   cursor: pointer;
-  background-image: url(../Images/hover-image.jpg);
+  background-image: url(../assets/hover-image.jpg);
   background-size: cover;
 }
 .post-date {
@@ -738,22 +738,22 @@ a {
 }
 @keyframes hero {
   0% {
-    background-image: url(../Images/home-bg-2.jpg);
+    background-image: url(../assets/home-bg-2.jpg);
   }
   25% {
-    background-image: url(../Images/home-bg-2.jpg);
+    background-image: url(../assets/home-bg-2.jpg);
   }
   30% {
-    background-image: url(../Images/home-bg.jpg);
+    background-image: url(../assets/home-bg.jpg);
   }
   60% {
-    background-image: url(../Images/home-bg.jpg);
+    background-image: url(../assets/home-bg.jpg);
   }
   75% {
-    background-image: url(../Images/home-bg-2.jpg);
+    background-image: url(../assets/home-bg-2.jpg);
   }
   100% {
-    background-image: url(../Images/home-bg-2.jpg);
+    background-image: url(../assets/home-bg-2.jpg);
   }
 }
 @media only screen and (max-width: 576px) {
