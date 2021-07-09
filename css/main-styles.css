@@ -535,7 +535,6 @@ a {
   padding-left: 3rem;
   padding-top: 1.5rem;
   overflow: hidden;
-  transition: all 0.5s;
   font-size: var(--text);
   color: var(--grey-old);
 }
@@ -956,7 +955,7 @@ a {
     font-size: var(--text);
     font-weight: 700;
   }
-  .button-left a {
+  .button-left .but-link {
     color: var(--just-white);
   }
   .button-left:hover {

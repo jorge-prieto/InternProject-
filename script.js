@@ -2,9 +2,9 @@ let slideIndex = 0;
 showSlides();
 
 function showSlides() {
-  const slides =Object.values(document.getElementsByClassName('testimonial-post-container'));
+  const slides = Object.values(document.getElementsByClassName('testimonial-post-container'));
   let dots = document.getElementsByClassName('dot');
-  slides.forEach (element => element.style.display= 'none');
+  slides.forEach(element => element.style.display ='none');
   slideIndex++;
   if (slideIndex > slides.length) {
     slideIndex = 1;
@@ -25,7 +25,7 @@ function mobileMenu() {
 
 const navLink = document.querySelectorAll('.navbar-link');
 
-navLink.forEach((elemento) => elemento.addEventListener('click', closeMenu));
+navLink.forEach((element) => element.addEventListener('click', closeMenu));
 
 function closeMenu() {
   hamburger.classList.remove('active');
