@@ -2,21 +2,14 @@ let slideIndex = 0;
 showSlides();
 
 function showSlides() {
-  let iterator;
-  const slides = document.getElementsByClassName('testimonial-post-container');
+  const slides =Object.values(document.getElementsByClassName('testimonial-post-container'));
   let dots = document.getElementsByClassName('dot');
-  for (iterator=0; iterator < slides.length; iterator++)  {
-    slides[iterator].style.display = 'none';
-  }
+  slides.forEach (element => element.style.display= 'none');
   slideIndex++;
   if (slideIndex > slides.length) {
     slideIndex = 1;
   }
-  for (iterator = 0; iterator < dots.length; iterator++) {
-    dots[iterator].className = dots[iterator].className.replace(' active', '');
-  }
   slides[slideIndex - 1].style.display = 'block';
-  dots[slideIndex - 1].className += ' active';
   setTimeout(showSlides, 3500); // Change image every 3.5 seconds
 }
 
