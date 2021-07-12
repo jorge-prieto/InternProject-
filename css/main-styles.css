@@ -450,6 +450,10 @@ a {
   cursor: pointer;
   background-image: url(../assets/hover-image.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-animation:mymove 5s linear infinite;
+  /* Safari and Chrome */
+  animation:mymove 5s linear infinite;
 }
 .post-date {
   margin-bottom: 1rem;
@@ -755,6 +759,22 @@ a {
     background-image: url(../assets/home-bg-2.jpg);
   }
 }
+@-webkit-keyframes mymove {
+  from {
+      background-position: 0% 0%;
+  }
+  to {
+      background-position: 0% 100%;
+  }
+}
+@keyframes mymove {
+  from {
+      background-position: 0% 0%;
+  }
+  to {
+      background-position: 0% 100%;
+  }
+}
 @media only screen and (max-width: 576px) {
   .navbar-menu {
     position: fixed;
@@ -902,6 +922,12 @@ a {
     grid-template: repeat(3, 1fr) / repeat(2, 1fr);
     margin: 0 5rem;
   }
+  .portfolio-img-container {
+    margin-left: 1rem;
+  }
+  .portfolio-img-container .imagen {
+    width: 100%;
+  }
   .blog-detail-container {
     display: grid;
     grid-template: repeat(3, 1fr) / repeat(2, 1fr);
@@ -985,12 +1011,18 @@ a {
     align-items: center;
   }
   .team-image-container .team-img {
-    width: 22rem;
+    width: 25rem;
   }
   .portfolio-detail-container {
     display: grid;
     grid-template: repeat(2, 1fr) / repeat(3, 1fr);
     margin: 0 auto;
+  }
+  .portfolio-img-container {
+    margin-left: 1rem;
+  }
+  .portfolio-img-container .imagen {
+    width: 100%;
   }
   .blog-detail-container {
     display: grid;
@@ -999,7 +1031,7 @@ a {
     padding: 0 9rem;
   }
   .blog-post-container {
-    width: 30rem;
+    width: 100%;
   }
   .contact-detail-form {
     display: grid;
