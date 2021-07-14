@@ -469,6 +469,9 @@ a {
   font-weight: 700;
   color: var(--warm-black);
 }
+.post-button:hover .post-title {
+  color: var(--blue-soft);
+}
 .post-author {
   padding-left: 2rem;
   font-size: var(--text);
