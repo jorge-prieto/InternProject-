@@ -1,17 +1,16 @@
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  const slides = Object.values(document.getElementsByClassName('testimonial-post-container'));
-  let dots = document.getElementsByClassName('dot');
-  slides.forEach(element => element.style.display ='none');
-  slideIndex++;
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
-  }
-  slides[slideIndex - 1].style.display = 'block';
-  setTimeout(showSlides, 3500); // Change image every 3.5 seconds
-}
+$(document).ready(() => {
+  $('.owl-carousel').owlCarousel({
+    items: 2,
+    itemsDesktop: [1000, 2],
+    itemsDesktopSmall: [769, 2],
+    itemsTablet: [567, 1],
+    pagination: true,
+    navigation: false,
+    navigationText: ['', ''],
+    slideSpeed: 1000,
+    autoPlay: true,
+  });
+});
 
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.navbar-menu');
