@@ -543,7 +543,7 @@ a {
   color: var(--grey-old);
 }
 .acordeon-container-section .block.activo .block-content {
-  height: 6rem;
+  height: 26rem;
 }
 .main-testimonial-detail {
   position: relative;
@@ -575,10 +575,10 @@ a {
   position: relative;
   display: flex;
   margin: auto;
+  overflow: hidden;
 }
 .testimonial-post-container .test-image {
   position: absolute;
-  top: -1.5rem;
   width: 6rem;
   height: 6rem;
 }
@@ -595,20 +595,6 @@ a {
   margin-bottom: 2rem;
   font-size: var(--text);
   font-weight: 700;
-}
-.testimonial-dots-container {
-  margin-top: 2rem;
-  text-align: center;
-  padding: 0.5rem;
-}
-.dot {
-  height: 1.2rem;
-  width: 1.2rem;
-  margin: 0 0.2rem;
-  background-color: var(--blue-hard);
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
 }
 .main-contact-detail {
   position: relative;
@@ -777,7 +763,7 @@ a {
 }
 @media only screen and (max-width: 576px) {
   .navbar-menu {
-    position: fixed;
+    position: absolute;
     left: -100%;
     top: 5rem;
     flex-direction: column;
@@ -953,7 +939,9 @@ a {
     margin-left: 1rem;
     padding-left: 1rem;
   }
-
+  .acordeon-container-section .block.activo .block-content {
+    height: 10rem;
+  }
   .contact-detail-form {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -1032,6 +1020,9 @@ a {
   }
   .blog-post-container {
     width: 100%;
+  }
+  .acordeon-container-section .block.activo .block-content {
+    height: 10rem;
   }
   .contact-detail-form {
     display: grid;
