@@ -136,6 +136,9 @@ a {
 .navbar-link:hover {
   color: var(--blue-soft);
 }
+.main-header-container .main-navbar-container .navbar-menu .navbar-item.actived > .navbar-link {
+  color: var(--blue-soft);
+}
 .hamburger {
   display: none;
 }
@@ -675,6 +678,10 @@ a {
   font-weight: 700;
   font-family: "et-line", sans-serif;
 }
+.contact-button:hover {
+  background-color: var(--just-white);
+  color: var(--blue-soft);
+}
 .footer {
   position: relative;
   width: 100%;
@@ -1035,10 +1042,20 @@ a {
     grid-template-columns: 50% 50%;
     padding: 0 9rem;
   }
+  .contact-form-box {
+    max-width: 40rem;
+    padding-left: 10rem;
+  }
+  .form-message {
+    max-width: 40rem;
+  }
   .form-text {
     height: 11rem;
   }
   .button-box {
-    padding-left: 6rem;
+    width: 50%;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
   }
 }
