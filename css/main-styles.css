@@ -225,6 +225,9 @@ a {
   font-weight: 500;
   color: var(--grey);
 }
+.services-card-body .info {
+  color: var(--blue-soft);
+}
 .main-about-detail {
   position: relative;
   width: 100%;
