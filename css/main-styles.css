@@ -13,13 +13,15 @@
   --soft: #e2e8f0;
   --back-soft: rgba(89, 73, 30, 0.16);
   --back-invisible: rgba(0, 0, 0, 0.15);
-  --vanish: rgba(0, 0, 0, 0.05);
-  --blue-invisible: rgba(109, 196, 174, 0.4);
+  --vanish: rgba(255, 255, 255, 0.76);
+  --blue-invisible: rgba(109, 196, 174, 0.801);
   --blue-hard: rgba(137, 250, 250, 0.5);
   --text: 1.4rem;
   --titles: 2.6rem;
   --subtitle: 1.8rem;
-  --icons: 2.3rem;
+  --media: 1.2rem;
+  --icons: 1.6rem;
+  --card-title: 2rem;
 }
 * {
   box-sizing: border-box;
@@ -180,7 +182,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   margin-top: 1rem;
 }
 .services-detail-card {
@@ -217,7 +219,7 @@ a {
 .services-card-title {
   margin-bottom: 1.5rem;
   padding-left: 5.5rem;
-  font-size: var(--subtitle);
+  font-size: var(--card-title);
   font-weight: 700;
   color: var(--black);
 }
@@ -321,18 +323,32 @@ a {
   color: var(--grey);
 }
 .team-social-media {
+  display: flex;
   position: relative;
-  top: -12rem;
+  justify-content: center;
+  align-items: center;
+  top: -13rem;
   background-color: var(--vanish);
-  height: 5rem;
-  z-index: -1;
+  height: 6rem;
+  z-index: -1; 
 }
 .team-social-media .media {
-  margin-top: 2rem;
-  margin-left: 0.5rem;
+  margin-left: 1.5rem;
 }
 .team-image-container:hover .team-social-media {
   z-index: 1;
+  animation: cold 1s ease-in ;
+}
+.media {
+  padding-top: 0.9rem;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  font-size: var(--media);
+  font-weight: 300;
+  background-color: var(--black);
+  color: var(--just-white);
+  border-radius: 50%;
 }
 .main-portfolio-detail {
   position: relative;
@@ -389,7 +405,16 @@ a {
 }
 .portfolio-background-container .back-icon {
   margin-top: 20rem;
-  font-size: 2.3rem;
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--off-white);
+  border-radius: 50%;
+}
+.icon-attachment{
+  padding-top: 1.5rem;
+  font-size: var(--card-title);
+  font-weight: 700;
+  color: var(--blue-soft);
 }
 .portfolio-background-container .back-name {
   margin-top: 3rem;
@@ -401,6 +426,7 @@ a {
 }
 .portfolio-img-container:hover > .portfolio-background-container {
   z-index: 1;
+  animation: cold 1s ease-in ;
 }
 .main-blog-detail {
   position: relative;
@@ -540,19 +566,19 @@ a {
   background-color: var(--just-white);
   margin-left: 2rem;
   margin-top: 0;
-  font-size: var(--text);
+  font-size: var(--subtitle);
 }
 .acordeon-container-section .block-content {
   background-color: var(--just-white);
   height: 0;
-  padding-left: 3rem;
-  padding-top: 1.5rem;
+  padding-left: 1rem;
+  padding-top: 2.5rem;
   overflow: hidden;
   font-size: var(--text);
   color: var(--grey-old);
 }
 .acordeon-container-section .block.activo .block-content {
-  height: 26rem;
+  height: 13rem;
 }
 .main-testimonial-detail {
   position: relative;
@@ -580,7 +606,7 @@ a {
   color: var(--grey);
 }
 .testimonial-detail-container {
-  max-width: 50rem;
+  max-width: 80rem;
   position: relative;
   display: flex;
   margin: auto;
@@ -590,20 +616,31 @@ a {
   position: absolute;
   width: 6rem;
   height: 6rem;
+  margin-left: 1.5rem;
 }
 .testimonial-post-container .test-text {
-  padding-right: 1.5rem;
-  padding-left: 7rem;
+  padding-right: 2.5rem;
+  padding-left: 10rem;
   margin-bottom: 2rem;
   font-size: var(--text);
   font-weight: 500;
   color: var(--grey);
 }
 .testimonial-post-container .testimonial-names {
-  padding-left: 7rem;
+  padding-left: 10rem;
   margin-bottom: 2rem;
   font-size: var(--text);
   font-weight: 700;
+}
+.main-testimonial-detail .owl-theme .owl-controls .owl-page span {
+  border: 2px solid var(--blue-soft);
+  background: var(--blue-soft);
+  border-radius: 50%;
+}
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls .owl-page:hover span {
+  background: var(--blue-soft);
+  border-color: var(--blue-soft);
 }
 .main-contact-detail {
   position: relative;
@@ -686,7 +723,7 @@ a {
   position: relative;
   width: 100%;
   min-width: 32rem;
-  height: 10rem;
+  height: 12rem;
   padding-top: 3rem;
   background-color: var(--just-white);
 }
@@ -695,45 +732,26 @@ a {
   flex-direction: column;
   align-items: center;
 }
+.footer-text {
+  font-size: var(--text);
+  font-weight: 500;
+}
 .footer-copy-box {
   margin: 1rem 0;
 }
+.footer-logo-box {
+  display: flex;
+}
 .footer-logo-box .link {
-  padding-right: 0.25rem;
+  padding-right: 1.5rem;
 }
-.icon-facebook {
+.icons {
+  padding-top: 1rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  text-align: center;
   font-size: var(--icons);
-  font-weight: 700;
-  background-color: var(--black);
-  color: var(--just-white);
-  border-radius: 50%;
-}
-.icon-twitter {
-  font-size: var(--icons);
-  background-color: var(--black);
-  color: var(--just-white);
-  border-radius: 50%;
-}
-.icon-dribbble {
-  font-size: var(--icons);
-  background-color: var(--black);
-  color: var(--just-white);
-  border-radius: 50%;
-}
-.icon-tumblr {
-  font-size: var(--icons);
-  background-color: var(--black);
-  color: var(--just-white);
-  border-radius: 50%;
-}
-.icon-linkedin {
-  font-size: var(--icons);
-  background-color: var(--black);
-  color: var(--just-white);
-  border-radius: 50%;
-}
-.icon-googleplus {
-  font-size: var(--icons);
+  font-weight: 500;
   background-color: var(--black);
   color: var(--just-white);
   border-radius: 50%;
@@ -772,6 +790,23 @@ a {
   }
   to {
       background-position: 0% 100%;
+  }
+}
+@keyframes cold {
+  0% {
+    opacity: 0.2;
+  }
+  25% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  75% { 
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
   }
 }
 @media only screen and (max-width: 576px) {
@@ -868,12 +903,6 @@ a {
   .cloud {
     left: 3rem;
   }
-  .focus {
-    left: 32rem;
-  }
-  .basket {
-    left: 32rem;
-  }
   .services-detail-box {
     padding-left: 4rem;
     max-width: 40rem;
@@ -885,7 +914,6 @@ a {
     padding-right: 1rem;
   }
   .services-card-body {
-    text-align: justify;
     padding-left: 4.5rem;
     padding-right: 3rem;
     max-width: 40rem;
@@ -893,8 +921,7 @@ a {
   .about-tittle {
     padding-left: 4rem;
   }
-  .about-info {
-    padding-right: 5rem;
+  .about-info { 
     padding-left: 4rem;
   }
   .about-detail-video {
@@ -932,6 +959,9 @@ a {
     grid-template: repeat(3, 1fr) / repeat(2, 1fr);
     padding: 0 9rem;
   }
+  .blog-post-container {
+    max-width: 70rem;
+  }
   .item1 {
     grid-column: 1 / 3;
   }
@@ -948,12 +978,10 @@ a {
     width: 100%;
   }
   .button4 {
-    width: 100%;
-    margin-left: 1rem;
-    padding-left: 1rem;
+    width: 90%;
   }
   .acordeon-container-section .block.activo .block-content {
-    height: 10rem;
+    height: 12rem;
   }
   .contact-detail-form {
     display: grid;
@@ -964,7 +992,10 @@ a {
     height: 11rem;
   }
   .button-box {
-    padding-left: 6rem;
+    width: 50%;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
   }
 }
 @media only screen and (min-width: 769px) {
@@ -1003,13 +1034,24 @@ a {
     color: var(--blue-soft);
     cursor: pointer;
   }
+  .navbar-logo{
+    margin-left: 8rem;
+  }
   .services-detail-title {
-    padding-left: 4rem;
+    padding-left: 5.5rem;
+  }
+  .services-card-title {
+    margin: 0.5rem 0 0 1rem;
   }
   .about-detail-container {
     flex-direction: initial;
     padding: 0 7rem;
+    justify-content: flex-start;
     align-items: center;
+  }
+  .about-detail-container .video {
+    width: 50rem;
+    height: 30rem;
   }
   .team-image-container .team-img {
     width: 25rem;
@@ -1034,8 +1076,12 @@ a {
   .blog-post-container {
     width: 100%;
   }
+  .main-question-detail .main-acordeon-content {
+    max-width: 80rem;
+    margin: auto;
+  }
   .acordeon-container-section .block.activo .block-content {
-    height: 10rem;
+    height: 12rem;
   }
   .contact-detail-form {
     display: grid;
