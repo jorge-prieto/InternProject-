@@ -1046,6 +1046,9 @@ a {
   .services-card-title {
     margin: 0.5rem 0 0 1rem;
   }
+  .services-card-body {
+    margin: 1rem 0 0 1rem;
+  }
   .about-detail-container {
     flex-direction: initial;
     padding: 0 7rem;
